@@ -1,6 +1,5 @@
 # Criptografador Python AES 🔐
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
 Um utilitário de linha de comando em Python para criptografar e descriptografar arquivos usando o algoritmo AES (Advanced Encryption Standard) no modo CTR.
@@ -72,20 +71,6 @@ O desafio original propunha a implementação de um "ransomware" para fins educa
 
 - Python 3.8 ou superior
 - pyaes
-
-## 🤝 Contribuindo
-
-Contribuições são bem-vindas! Sinta-se à vontade para:
-
-1. Fazer um Fork
-2. Criar uma Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a Branch (`git push origin feature/AmazingFeature`)
-5. Abrir um Pull Request
-
-## 📄 Licença
-
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
 
 ## 👏 Agradecimentos
 
