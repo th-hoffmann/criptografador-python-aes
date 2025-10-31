@@ -1,1 +1,93 @@
-Este é um arquivo de teste descriptografado e perfeitamente legível (Ao menos por enquanto 😜).
+Guia de Tecnologias - Criptografador Python AES
+================================================
+
+História da Criptografia
+-----------------------
+A criptografia tem uma história milenar, evoluindo de simples substituições de caracteres até os complexos algoritmos modernos:
+
+1. Criptografia Clássica (antes de 1900)
+   - Cifra de César (50 a.C.): Deslocamento simples de caracteres
+   - Máquina Enigma (1918): Usada na Segunda Guerra Mundial
+   - Códigos de substituição e transposição manual
+
+2. Criptografia Moderna (1900-presente)
+   - 1976: Surgimento da criptografia de chave pública (RSA)
+   - 2001: AES torna-se padrão mundial
+   - Atual: Foco em criptografia pós-quântica
+
+Tipos de Criptografia
+--------------------
+1. Simétrica (chave única)
+   - Mesma chave para criptografar e descriptografar
+   - Mais rápida e eficiente
+   - Exemplos: AES, DES, 3DES
+
+2. Assimétrica (chave pública/privada)
+   - Par de chaves diferentes
+   - Mais segura para comunicação
+   - Exemplos: RSA, ECC
+
+3. Hash (sem chave)
+   - Função unidirecional
+   - Usada para verificação de integridade
+   - Exemplos: MD5, SHA-256
+
+Tecnologias do Projeto
+---------------------
+1. Criptografia AES (Advanced Encryption Standard)
+   - Algoritmo de criptografia simétrica
+   - Considerado um dos mais seguros atualmente
+   - Utiliza a mesma chave para criptografar e descriptografar
+   - Neste projeto, implementado no modo CTR (Counter)
+   - Substituiu o DES como padrão em 2001
+   - Suporta chaves de 128, 192 e 256 bits
+
+2. Python
+   - Linguagem de programação principal do projeto
+   - Versão 3.8 ou superior
+   - Escolhida por sua simplicidade e recursos de segurança
+   - Grande ecossistema de bibliotecas criptográficas
+
+3. Biblioteca pyaes
+   - Implementação pura do AES em Python
+   - Não depende de bibliotecas externas em C
+   - Ideal para fins educacionais e de estudo
+   - Permite visualização clara do processo
+
+4. Modo de Operação CTR (Counter)
+   - Transforma cifra de bloco em cifra de fluxo
+   - Permite processamento paralelo
+   - Não requer preenchimento do bloco
+   - Mais seguro que modos tradicionais como ECB
+   - Utiliza um contador para gerar keystream
+
+5. Funcionamento do Sistema
+   - Arquivo original é lido em modo binário
+   - Dados são criptografados usando AES-CTR
+   - Arquivo criptografado recebe extensão .encrypted
+   - Processo é reversível usando a mesma chave
+
+Aplicações Práticas da Criptografia
+---------------------------------
+1. Segurança Digital
+   - Proteção de dados pessoais
+   - Comunicações seguras (HTTPS)
+   - Armazenamento em nuvem
+   - Transações bancárias
+
+2. Privacidade
+   - Mensagens instantâneas (WhatsApp, Signal)
+   - E-mails criptografados
+   - VPNs
+   - Documentos confidenciais
+
+3. Autenticação
+   - Assinaturas digitais
+   - Certificados SSL/TLS
+   - Blockchain e criptomoedas
+   - Tokens de segurança
+
+Nota: Este é um arquivo de demonstração que será usado para testar
+o sistema de criptografia. Após a execução do encrypter.py,
+este conteúdo será criptografado e só poderá ser lido novamente
+após a execução do decrypter.py com a chave correta.

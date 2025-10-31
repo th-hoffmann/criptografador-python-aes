@@ -1,10 +1,12 @@
 import os
 import pyaes
 
-# Abrir o arquivo a ser criptografado
+# Definir caminho do arquivo relativo à raiz do projeto
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+file_name = os.path.join(base_dir, "teste.txt")
 
-file_name = 'teste.txt'
-file = open(file_name, 'rb')
+# Abrir o arquivo a ser criptografado
+file = open(file_name, "rb")
 file_data = file.read()
 file.close()
 
@@ -21,7 +23,7 @@ aes = pyaes.AESModeOfOperationCTR(key)
 crypto_data = aes.encrypt(file_data)
 
 ## Salvar os dados criptografados em um novo arquivo
-new_file = file_name + ".encripted"
+new_file = file_name + ".encrypted"
 new_file = open(f'{new_file}', 'wb')
 new_file.write(crypto_data)
 new_file.close()

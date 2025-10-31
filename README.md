@@ -1,59 +1,99 @@
+# Criptografador Python AES 🔐
 
-# Criptografador Python AES
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
-Um utilitário simples de linha de comando em Python para criptografar e descriptografar arquivos usando o algoritmo AES no modo CTR.
+Um utilitário de linha de comando em Python para criptografar e descriptografar arquivos usando o algoritmo AES (Advanced Encryption Standard) no modo CTR.
 
 ## 🛡️ Sobre o Projeto
 
-Este projeto foi desenvolvido como parte de um desafio de projeto da **[Formação Cybersecurity da DIO](https://web.dio.me/track/formacao-cybersecurity)**.
+Este projeto foi desenvolvido como parte do desafio de projeto da **[Formação Cybersecurity da DIO](https://web.dio.me/track/formacao-cybersecurity)** 🎓
 
 O desafio original propunha a implementação de um "ransomware" para fins educacionais. Esta ferramenta é uma prova de conceito que implementa a parte central dessa ideia: a **criptografia de arquivos**.
 
-O objetivo é puramente didático, focado em demonstrar a implementação da criptografia simétrica com a biblioteca `pyaes` em Python, ajudando a entender os mecanismos por trás de malwares de criptografia para **fins de estudo e defesa**.
+> ⚠️ **Aviso**: Este projeto tem finalidade exclusivamente educacional, focado em demonstrar a implementação da criptografia simétrica para fins de estudo e defesa.
 
 ## ✨ Funcionalidades
 
-  * `encripter.py`: Localiza um arquivo (`teste.txt`), criptografa seu conteúdo e o salva como `teste.txt.encripted`.
-  * `decripter.py`: Localiza o arquivo `teste.txt.encripted`, descriptografa seu conteúdo usando a chave correta e o restaura.
+- 🔒 **Criptografia** (`encrypter.py`):
+  - Localiza o arquivo `teste.txt`
+  - Criptografa seu conteúdo usando AES-CTR
+  - Salva como `teste.txt.encrypted`
+
+- 🔓 **Descriptografia** (`decrypter.py`):
+  - Localiza o arquivo `teste.txt.encrypted`
+  - Descriptografa usando a chave correta
+  - Restaura o arquivo original
 
 ## 💻 Tecnologias Utilizadas
 
-  * **Python 3**
-  * **`pyaes`**: Biblioteca para implementação do AES (Advanced Encryption Standard).
+- ![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=flat&logo=python&logoColor=white)
+- **`pyaes`**: Implementação pura do AES em Python
 
 ## 🚀 Como Usar
 
-1.  Clone este repositório:
+### Preparação do Ambiente
 
+1. Clone este repositório:
     ```bash
     git clone https://github.com/SEU-USUARIO/criptografador-python-aes.git
     cd criptografador-python-aes
     ```
 
-2.  Instale a dependência necessária:
-
+2. Crie e ative um ambiente virtual:
     ```bash
-    pip install pyaes
+    python -m venv venv
+    
+    # No Linux/macOS
+    source venv/bin/activate
+    
+    # No Windows
+    venv\Scripts\activate
     ```
 
-3.  Crie um arquivo `teste.txt` na pasta com algum conteúdo para testar.
-
-4.  Para **criptografar** o arquivo:
-
+3. Instale as dependências:
     ```bash
-    python encripter.py
+    pip install -r requirements.txt
     ```
 
-    *(Isso irá criar o arquivo `teste.txt.encripted` e apagar o `teste.txt` original)*
+### Uso
 
-5.  Para **descriptografar** o arquivo:
-
+1. Para **criptografar**:
     ```bash
-    python decripter.py
+    python scripts/encrypter.py
     ```
 
-    *(Isso irá recriar o `teste.txt` original e apagar o `teste.txt.encripted`)*
+2. Para **descriptografar**:
+    ```bash
+    python scripts/decrypter.py
+    ```
+
+## 📋 Requisitos
+
+- Python 3.8 ou superior
+- pyaes
+
+## 🤝 Contribuindo
+
+Contribuições são bem-vindas! Sinta-se à vontade para:
+
+1. Fazer um Fork
+2. Criar uma Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a Branch (`git push origin feature/AmazingFeature`)
+5. Abrir um Pull Request
 
 ## 📄 Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](https://www.google.com/search?q=LICENSE) para mais detalhes.
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
+
+## 👏 Agradecimentos
+
+- [Digital Innovation One](https://dio.me/) pela proposta do projeto
+- Comunidade Python pelos recursos e ferramentas
+
+---
+
+<p align="center">
+  Desenvolvido com ❤️ para fins educacionais
+</p>

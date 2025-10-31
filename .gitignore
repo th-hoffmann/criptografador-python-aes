@@ -1,0 +1,9 @@
+# Ambiente virtual
+venv/
+
+# Arquivos do projeto
+teste.txt.encrypted
+
+# Cache Python
+__pycache__/
+*.pyc
